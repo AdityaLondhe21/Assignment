@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login page</title>
+</head>
+<style>
+    * {
+        margin: 5px 0 0 10px;
+    }
+</style>
+<body>
+    <h2>Please Login</h2>
+    <hr>
+    <form action="/verify" method="post">
+        Customer ID: <input type="number" name="custID"><br>
+        Password: <input type="password" name="pwd"><br>
+        <input type="submit" value="LOGIN">
+        <input type="reset" value="CLEAR">
+    </form>
+    <hr>
+    <h4>Don't have an account? <a href="/signup">Register</a></h4>
+</body>
+</html>

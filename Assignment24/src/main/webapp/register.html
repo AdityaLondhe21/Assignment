@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register page</title>
+</head>
+<style>
+    * {
+        margin: 5px 0 0 10px;
+    }
+</style>
+<body>
+    <h2>Register Here</h2>
+    <hr>
+    <form action="/register" method="post">
+        Customer ID: <input type="number" name="custID"><br>
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="pwd"><br>
+        Confirm Password: <input type="password" name="confirmpwd"><br>
+        <input type="submit" value="REGISTER">
+        <input type="reset" value="CLEAR">
+    </form>
+	<hr>
+    <h4>Already have an account? <a href="/signin">Login</a></h4>
+</body>
+</html>
