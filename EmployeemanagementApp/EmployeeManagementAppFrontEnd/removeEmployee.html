@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Delete Employee</title>
+</head>
+<body>
+    <header>
+        <h1>Employee Management App</h1>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="addEmployee.html">Add Employee</a>
+            <a href="updateEmployee.html">Update Employee Data</a>
+            <a href="removeEmployee.html">Delete Employee Data</a>
+        </div>
+        <div class="content">
+            <h2>Remove Employee</h2>
+            <br>
+            <form onsubmit="removeEmployee(); return false;">
+                <label for="removeId">Remove by ID:</label>
+                <input type="number" id="removeId" required>
+                <button type="button" onclick="searchEmployee()">Search</button>
+                <br>
+                <button type="submit">Remove</button>
+            </form>
+            <br><hr style="width: 100%;"><br>
+            <div class="employee-details">
+                <h2>Employee Details</h2>
+                <ul id="searchList" class="employee-list"></ul>
+                <table id="searchTable" class="employee-table">
+                    <tbody id="searchTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

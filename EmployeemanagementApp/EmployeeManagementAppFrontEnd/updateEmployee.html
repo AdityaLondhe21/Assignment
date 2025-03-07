@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Update Employee</title>
+</head>
+<body>
+    <header>
+        <h1>Employee Management App</h1>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="addEmployee.html">Add Employee</a>
+            <a href="updateEmployee.html">Update Employee Data</a>
+            <a href="removeEmployee.html">Delete Employee Data</a>
+        </div>
+        <div class="content">
+            <h2>Update Employee</h2>
+            <br>
+            <form onsubmit="updateEmployee(); return false;">
+                <label for="updateId">Update by ID:</label>
+                <input type="number" id="updateId" required oninput="searchEmployee()">
+                <!-- <label for="updateName">New Name:</label>
+                <input type="text" id="updateName" pattern="[A-Za-z\s]+" title="Name should contain only letters and spaces">
+                <label for="updateAge">New Age:</label>
+                <input type="number" id="updateAge" min="21" max="60" title="Age should be between 21 and 60"> -->
+                <label for="updateDesignation">New Designation:</label>
+                <input type="text" id="updateDesignation" pattern="[A-Za-z\s]+" title="Designation should contain only letters and spaces">
+                <label for="updateSalary">New Salary:</label>
+                <input type="number" id="updateSalary" min="100000" max="50000000" title="Salary should be between 100000 and 50000000">
+                <button type="submit">Update</button>
+            </form>
+            <br><hr style="width: 100%;"><br>
+            <div class="employee-details">
+                <h2>Employee Details</h2>
+                <ul id="searchList" class="employee-list"></ul>
+                <table id="searchTable" class="employee-table">
+                    <tbody id="searchTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

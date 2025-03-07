@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+    <title>Employee Management App</title>
+</head>
+<body>
+    <header>
+        <h1>Employee Management App</h1>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="addEmployee.html">Add Employee</a>
+            <a href="updateEmployee.html">Update Employee Data</a>
+            <a href="removeEmployee.html">Delete Employee Data</a>
+        </div>
+        <div class="content">
+            <h2>Add Employee</h2>
+            <br>
+            <form onsubmit="addEmployee(); return false;">
+                <label for="employeeName">Name:</label>
+                <input type="text" id="employeeName" required pattern="[A-Za-z\s]+" title="Name should contain only letters and spaces">
+                <label for="employeeAge">Age:</label>
+                <input type="number" id="employeeAge" required min="21" max="60" title="Age should be between 21 and 60">
+                <label for="employeeDesignation">Designation:</label>
+                <input type="text" id="employeeDesignation" required pattern="[A-Za-z\s]+" title="Designation should contain only letters and spaces">
+                <label for="employeeSalary">Salary:</label>
+                <input type="number" id="employeeSalary" required min="100000" max="50000000" title="Salary should be between 100000 and 50000000">
+                <button type="submit">Add Employee</button>
+            </form>
+            <br><hr style="width: 100%;"><br>
+            <div class="employee-details">
+                <h2>Employee Details</h2>
+                <table id="searchTable" class="employee-table">
+                    <tbody id="searchTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

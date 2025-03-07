@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js" defer></script>
+    <title>Employee Management App</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', (event) => {
+            filterEmployees();
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Employee Management App</h1>
+    </header>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="index.html">Home</a>
+            <a href="addEmployee.html">Add Employee</a>
+            <a href="updateEmployee.html">Update Employee Data</a>
+            <a href="removeEmployee.html">Delete Employee Data</a>
+        </div>
+        <div class="content">
+            <h1>Search Employees</h1>
+            <br><hr style="width: 100%;"><br>
+            <div class="filter-container">
+                <div class="filter-item">
+                    <label for="filterId">Filter by ID:</label>
+                    <input type="number" id="filterId" oninput="filterEmployees()">
+                </div>
+                <div class="filter-item">
+                    <label for="filterName">Filter by Name:</label>
+                    <input type="text" id="filterName" oninput="filterEmployees()" pattern="[A-Za-z\s]+" title="Name should contain only letters and spaces">
+                </div>
+                <div class="filter-item">
+                    <label for="filterAge">Filter by Age:</label>
+                    <input type="number" id="filterAge" oninput="filterEmployees()" min="21" max="60" title="Age should be between 21 and 60">
+                </div>
+                <div class="filter-item">
+                    <label for="filterDesignation">Filter by Designation:</label>
+                    <input type="text" id="filterDesignation" oninput="filterEmployees()" pattern="[A-Za-z\s]+" title="Designation should contain only letters and spaces">
+                </div>
+                <div class="filter-item">
+                    <label for="filterSalary">Filter by Salary:</label>
+                    <input type="number" id="filterSalary" oninput="filterEmployees()" min="100000" max="50000000" title="Salary should be between 100000 and 50000000">
+                </div>
+                <!-- <button class="filter-button" onclick="filterEmployees()">Filter</button> -->
+            </div>
+            <br>
+            <hr style="width: 100%;">
+            <br>
+            <div class="employee-details">
+                <h2>Employee Table</h2>
+                <ul id="employeeList" class="employee-list"></ul>
+                <table id="employeeTable" class="employee-table">
+                    <tbody id="employeeTableBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
