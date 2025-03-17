@@ -1,0 +1,15 @@
+<h2>Circle Details</h2>
+<input id="radius" type="number" placeholder="Enter Radius in cm" max="10" #mr>
+<button (click)="calculate(mr.valueAsNumber)" >Display</button>
+<hr>
+<div style="display: flex; align-items: center;" *ngIf="flag">
+    <div [ngStyle]="{'width':radius+'cm','height':radius+'cm','border-radius':'100%','border':'1px solid blue'}"></div>
+    <div style="margin-left: 100px;">
+        Radius : {{radius}}cm <br>
+        Diameter : {{diameter}}cm <br>
+        Perimeter : {{perimeter}}cm <br>
+        Area : {{area}}cm<sup>2</sup> <br>
+    </div>
+</div>
+<hr>
+

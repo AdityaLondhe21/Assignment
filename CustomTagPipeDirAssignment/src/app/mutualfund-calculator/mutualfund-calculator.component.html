@@ -1,0 +1,17 @@
+<div class="service-page">
+    <h1>Mutual Fund Calculator</h1>
+    <hr style="width: 100%;">
+    <div class="mutual-fund-form">
+        <label for="monthly-sip-amount">Monthly SIP Amount:</label>
+        <input type="number" id="monthly-sip-amount" [(ngModel)]="monthlySIPAmount" required placeholder="Enter monthly sip amount" />
+        <label for="duration">Duration (Months):</label>
+        <input type="number" id="duration" [(ngModel)]="duration" required placeholder="Enter duration in months" />
+        <label for="roi">ROI = {{roi}}</label>
+        <input type="range" min="-25" max="25" [(ngModel)]="roi" required />
+        <button (click)="calculateTotalReturns()">Calculate Returns</button>
+    </div>
+    <hr style="width: 100%;">
+    <div id="result">
+        <p>Total Amount: {{returns | currency:'INR'}}/-</p>
+    </div>
+    </div>

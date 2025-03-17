@@ -1,0 +1,17 @@
+<h2>Sign Up</h2>
+<form [formGroup]="userForm" (ngSubmit)="register(userForm.value)">
+    <label for="customerID">Customer ID:</label><br>
+    <input type="text" id="customerID" name="customerID" required formControlName="customerID"><br>
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"  required formControlName="username"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"required formControlName="password"  ><br>
+    <label for="confirmPassword">Confirm Password:</label><br>
+    <input type="password" id="confirmPassword" name="confirmPassword" required formControlName="confirmPassword"><br>
+    <label for="accountNo">Account Number:</label><br>
+    <input type="text" id="accountNo" name="accountNo" required formControlName="accountNo"><br>
+    <div>
+        <input type="submit" value="Sign Up" [disabled]="userForm.invalid">
+        <input type="reset" value="Reset">
+    </div>
+</form>

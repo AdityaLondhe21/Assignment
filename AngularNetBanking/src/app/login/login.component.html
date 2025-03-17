@@ -1,0 +1,11 @@
+<h2>Login</h2>
+<form [formGroup]="loginForm" (ngSubmit)="validateUser(password.value)">
+    <label for="customerID">Customer ID:</label><br>
+    <input type="text" id="customerID" name="customerID" required [(ngModel)]="customerID" formControlName="customerID"><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"required  #password formControlName="password"><br>
+    <div>
+        <input type="submit" disabled  value="Submit">
+        <input type="reset" value="Reset">
+    </div>
+</form>

@@ -1,0 +1,25 @@
+<div class="service-page">
+    <h1>Calculate Loan</h1>
+    <hr style="width: 100%;">
+    <div class="loan-form">
+        <label for="applicant-name">Applicant Name:</label>
+        <input type="text" id="applicant-name" pattern="[A-Za-z\s]+" required [(ngModel)]="name" />
+        <label for="loan-type">Loan Type:</label>
+        <select id="loan-type" [(ngModel)]="type" (change)="setLoanType()">
+            <option value="Home">Home Loan</option>
+            <option value="Car">Car Loan</option>
+            <option value="Personal">Personal Loan</option>
+        </select>
+        <label for="loan-tenure">Loan Tenure (years):</label>
+        <input type="number" id="loan-tenure" [(ngModel)]="loanTenure" required min="0" [max]="loanType.maxTenure" title="Loan Tenure must be in between 0 and {{loanType.maxTenure}}" placeholder="Enter loan tenure (years)" />
+        <label for="loan-amount">Loan Amount:</label>
+        <input type="number" id="loan-amount" [(ngModel)]="loanAmount" required [min]="loanType.minAmount" [max]="loanType.maxAmount" placeholder="Enter loan amount" title="Loan amount must be in range {{loanType.minAmount}} and {{loanType.maxAmount}}" />
+        <button (click)="calculateLoan()">Calculate</button>
+    </div>
+    <hr style="width: 100%;">
+    <div id="result">
+        <p>Monthly EMI: Rs{{emi}}</p>
+        <p>Total Payment: Rs{{totalPayment}}</p>
+        <p>Total Interest: Rs{{totalInterest}}</p>
+    </div>
+</div>

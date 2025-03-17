@@ -1,0 +1,21 @@
+<h2>Bank Calculator</h2>
+<hr>
+<form >
+  <input type="radio" name="investment" value="loan" [(ngModel)]="selectedInvestment"> Loan
+  <input type="radio" name="investment" value="deposit" [(ngModel)]="selectedInvestment"> Deposit
+  <input type="radio" name="investment" value="mutual fund" [(ngModel)]="selectedInvestment"> Mutual Fund
+</form>
+<div [ngSwitch]="selectedInvestment">
+    <div *ngSwitchCase="'loan'">
+        <loan-calculator></loan-calculator>
+    </div>
+    <div *ngSwitchCase="'deposit'">
+        <deposit-calculator></deposit-calculator>
+    </div>
+    <div *ngSwitchCase="'mutual fund'">
+        <mutualfund-calculator></mutualfund-calculator>
+    </div>
+    <div *ngSwitchDefault>Select an investment option</div>
+</div>
+<hr>
+

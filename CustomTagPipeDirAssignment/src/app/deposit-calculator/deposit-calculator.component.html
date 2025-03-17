@@ -1,0 +1,15 @@
+<div class="service-page">
+<h1>Calculate Deposit</h1>
+<hr style="width: 100%;">
+<div class="deposit-form">
+    <label for="deposit-amount">Deposit Amount:</label>
+    <input type="number" id="deposit-amount" [(ngModel)]="depositAmount" required placeholder="Enter deposit amount" />
+    <label for="deposit-tenure">Deposit Tenure (years):</label>
+    <input type="number" id="deposit-tenure" [(ngModel)]="depositTenure" required placeholder="Enter deposit tenure" />
+    <button (click)="calculateDeposit()">Calculate</button>
+</div>
+<hr style="width: 100%;">
+<div id="result">
+    <p>Maturity Amount: {{maturityAmount | currency:'INR'}}/-</p>
+</div>
+</div>

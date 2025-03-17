@@ -1,0 +1,14 @@
+<h2>Currency Converter</h2>
+<hr>
+<input type="number" placeholder="Enter Amount" [(ngModel)]="amount">
+<select name="currency" id="currency" [(ngModel)]="selectedCurrency">
+    <option value="INR">INR</option>
+    <option value="USD">USD</option>
+    <option value="JPY">JPY</option>
+    <option value="SAR">SAR</option>
+    <option value="EUR">EUR</option>
+    <option value="AUD">AUD</option>
+</select>
+<br>
+Converted Amount : {{amount | money: selectedCurrency}}
+<hr>

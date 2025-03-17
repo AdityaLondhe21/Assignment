@@ -1,0 +1,17 @@
+<div *ngIf="ru.authoriseUser;else authorise">
+    Welcome! 
+</div>
+<ng-template #authorise>
+    <div *ngIf="ru.flag;else signup">
+        <app-login></app-login>
+        <div>
+            <p>Don't have an account? <a (click)="ru.changeFlag()">Sign up</a> here</p>
+        </div>
+    </div>
+    <ng-template #signup>
+        <app-signup></app-signup>
+        <div>
+            <p>Already have an account? <a (click)="ru.changeFlag()">Login</a> here</p>
+        </div>
+    </ng-template>
+</ng-template>

@@ -1,0 +1,24 @@
+<app-header></app-header>
+<div class="container">
+    <app-sidebar></app-sidebar>
+    <div class="content" [ngSwitch]="nav.page">
+            <div *ngSwitchCase="'Home'">
+            </div>
+            <div *ngSwitchCase="'Services'">
+                <!-- <deposit-calculator></deposit-calculator> -->
+            </div>
+            <div *ngSwitchCase="'Net Banking'">
+                <app-netbanking></app-netbanking>
+            </div>
+            <div *ngSwitchCase="'About Us'">
+
+            </div>
+            <div *ngSwitchCase="'Contact Us'">
+
+            </div>
+            <div *ngSwitchDefault><app-netbanking></app-netbanking>
+            </div>
+    </div>
+</div>
+<app-footer></app-footer>
+
