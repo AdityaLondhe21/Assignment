@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+  .footer{
+    position: fixed;
+    bottom: 0;
+    width: 80%;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .product-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .links{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+  }
+  h1 {
+    color: #333;
+  }
+  h4{
+    text-align: center;
+  }
+  .container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  }
+  /* .product{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+  } */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  a {
+    text-decoration: none;
+    color: #007bff;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  .inventory-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    background-color: #fff;
+  }
+
+  .inventory-table th, .inventory-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+  .inventory-table th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+  }
+
+  .inventory-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+  .inventory-table tr:hover {
+    background-color: #f1f1f1;
+  }
+
+  .inventory-table button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+  }
+
+  .inventory-table button:hover {
+    background-color: #0056b3;
+  }

@@ -1,0 +1,31 @@
+{
+  "products": [
+    {
+      "id": "f95be88e-316c-4634-a45e-99aeb5b15aa0",
+      "name": "Laptop",
+      "price": 100000,
+      "quantity": "12",
+      "vendorId": "575b45ba-8ed1-444b-8b2a-55a983bbe455"
+    },
+    {
+      "id": "66c7f035-1d8f-489f-8426-6bb97e040051",
+      "name": "Iphone",
+      "price": 30000,
+      "quantity": 30,
+      "vendorId": "8caf1cd2-6ba4-4369-896d-2041c88625d8"
+    }
+  ],
+  "vendors": [
+    {
+      "id": "8caf1cd2-6ba4-4369-896d-2041c88625d8",
+      "name": "Ankit",
+      "address": "Pune"
+    },
+    {
+      "id": "575b45ba-8ed1-444b-8b2a-55a983bbe455",
+      "name": "Rishi",
+      "address": "Nashik"
+    }
+  ],
+  "cart": []
+}
